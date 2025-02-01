@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Details.module.css";
 import coursesData from "../../../data/courses.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 //Third task: import useParams hook
 
 function Details() {
@@ -25,7 +25,9 @@ function Details() {
         </div>
       </div>
       {/* Task4: create Link to the Learn Page */}
-      <button className={style.button}>Start Learning</button>
+      <Link to={`/learn/${course.id}`}>
+        <button className={style.button}>Start Learning</button>
+      </Link>
     </div>
   );
 }

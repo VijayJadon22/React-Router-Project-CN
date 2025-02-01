@@ -3,6 +3,7 @@ import Nav from "./components/nav/Nav";
 import Courses from "./pages/app/courses/Courses";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Details from "./pages/app/details/Details";
+import Learn from "./pages/app/learn/Learn";
 
 function App() {
   const routes = createBrowserRouter([
@@ -24,7 +25,8 @@ function App() {
               element: <Details /> // Dynamic route rendering the Details component for any courseId (e.g., /courses/123)
             }
           ]
-        }
+        },
+        { path: "/learn/:courseId", element: <Learn /> }
       ]
     }
   ]);
